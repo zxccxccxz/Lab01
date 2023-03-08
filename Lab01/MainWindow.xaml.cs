@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,13 +25,12 @@ namespace Lab01
         public MainWindow()
         {
             InitializeComponent();
-            _vm = new ViewModel();
-            DataContext = _vm;
+            _vm = new ViewModel(OnDataInputInvalid);
+            this.DataContext = _vm;
         }
-
-        private void ButtonClick(object sender, RoutedEventArgs e)
+        private void OnDataInputInvalid(object? sender, DataInputInvalidEventArgs e)
         {
-            MessageBox.Show("Button clicked!");
+            MessageBox.Show(e.ErrorMsg);
         }
     }
 }
