@@ -10,6 +10,9 @@
         <DatePicker HorizontalAlignment="Left" Margin="63,71,0,0" VerticalAlignment="Top" Height="67" Width="206" SelectedDate="{Binding BirthDate, UpdateSourceTrigger=PropertyChanged}"/>
         <Label Content="Age: " HorizontalAlignment="Left" Margin="63,0,0,0" VerticalAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Margin="105,0,0,0" TextWrapping="Wrap" Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center"/>
-
+        <Label Content="Asian sign: " HorizontalAlignment="Left" Margin="63,230,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="138,235,0,0" TextWrapping="Wrap" Text="{Binding AsianSign, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <Label Content="Western sign: " HorizontalAlignment="Left" Margin="63,256,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="152,261,0,0" TextWrapping="Wrap" Text="{Binding WesternSign, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
     </Grid>
 </Window>

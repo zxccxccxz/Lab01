@@ -9,9 +9,12 @@ namespace Lab01
     sealed class Model
     {
         public DateTime BirthDate { get; set; }
+        public string AsianSign { get; set; }
+        public string WesternSign { get; set; }
+
         public Model()
         {
-            BirthDate = DateTime.Now;
+            BirthDate = DateTime.Now.AddDays(-1);
         }
     }
 }

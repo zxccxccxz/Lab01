@@ -25,12 +25,12 @@ namespace Lab01
         public MainWindow()
         {
             InitializeComponent();
-            _vm = new ViewModel(OnDataInputInvalid);
+            _vm = new ViewModel(OnMsgBoxCreator);
             this.DataContext = _vm;
         }
-        private void OnDataInputInvalid(object? sender, DataInputInvalidEventArgs e)
+        private void OnMsgBoxCreator(object? sender, MsgBoxCreatorEventArgs e)
         {
-            MessageBox.Show(e.ErrorMsg);
+            MessageBox.Show(e.Msg);
         }
     }
 }
